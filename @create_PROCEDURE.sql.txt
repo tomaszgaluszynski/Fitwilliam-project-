@@ -11,4 +11,21 @@ END;
 
 
 
+CREATE TABLE FITZ.my_test_table2 AS SELECT * FROM FITZ.EMPLOYEES;
+
+CREATE OR REPLACE PROCEDURE FITZ.del_rows
+(p_table_name IN VARCHAR2, p_rows_deld OUT NUMBER)
+IS
+BEGIN
+    EXECUTE IMMEDIATE 'CREATE TABLE FITZ.'||p_table_name||'_'||to_char(sysdate,'yyyy_mm_dd')||' AS SELECT * FROM FITZ.'||p_table_name;
+    EXECUTE IMMEDIATE 'delete from '||p_table_name;
+    p_rows_deld := SQL%ROWCOUNT;
+END;
+/
+
+VARIABLE deleted NUMBER; 
+EXECUTE FITZ.del_rows('my_test_table2',:deleted);
+PRINT deleted;
+
+
 
