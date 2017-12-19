@@ -21,4 +21,4 @@ Hi John script should run in following order:
 
 -@create_procedure.sql
 
--@create_package.sql
+-@PACKAGE.sql
