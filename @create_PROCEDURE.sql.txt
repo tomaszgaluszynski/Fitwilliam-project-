@@ -9,28 +9,6 @@ BEGIN
     VALUES(v_DEPARTMENT_id,v_DEPARTMENT_NAME);
 END;
 
------------------CASE STATEMENT -------
-SELECT salary_group, count(*) FROM
-    (SELECT
-        EMPLOYEE_ID,
-        LAST_NAME,
-        CASE
-              WHEN salary <= 19000 THEN 'low'
-              WHEN salary > 19000 AND salary <= 35000 THEN 'medium'
-              WHEN salary > 40000 THEN 'high'
-              ELSE 'Theres a problem'
-        END AS salary_group
-      FROM FITZ.EMPLOYEES) x
-GROUP BY salary_group;
 
 
--- This is a package specification
 
-CREATE OR REPLACE PACKAGE FITZ.DEPARTMENT_pack
-AUTHID CURRENT_USER
-IS 
-    PROCEDURE ADD_DEPARTMENT (v_DEPARTMENT_id VARCHAR2,v_DEPARTMENT_NAME VARCHAR2);
-    PROCEDURE UPD_DEPARTMENT (v_DEPARTMENT_id VARCHAR2,v_DEPARTMENT_NAME VARCHAR2);
-    PROCEDURE DEL_DEPARTMENT (v_DEPARTMENT_id VARCHAR2);
-END;
-/
