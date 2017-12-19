@@ -1,0 +1,7 @@
+CREATE VIEW FITZ.EMPLOYEES_VIEW
+AS SELECT DISTINCT employees.employee_id,employees.first_name,employees.last_name,nationality AS NATIONALITY,departments.first_name AS DEPARTMENT,employees.salary
+    FROM FITZ.employees 
+    JOIN FITZ.nationalities 
+        ON FITZ.employees.nationality_id=FITZ.nationalities.NATIONALITY_ID 
+    JOIN FITZ.departments
+        ON FITZ.employees.department_id=FITZ.departments.department_id;
