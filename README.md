@@ -15,6 +15,8 @@ Hi John script should run in following order:
 
 -@create_EMPLOYEES.sql
 
+-@create_cursor.sql
+
 -@create_view.sql
 
 -@create_function.sql
