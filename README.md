@@ -1,6 +1,8 @@
 --Tomasz Galuszynski
 
---thm.gal@gmail.com
+email: thm.gal@gmail.com
+
+phone no: 0863743476
 
 Project brief:
 
@@ -8,7 +10,7 @@ Project brief:
 Simple hotel employee chain database. Hotells are located in different countreies, disclosing employees names,departments,sallaries etc.
 
 
-Hi John script should run in following order:
+Script should run in following order:
 
 -@create_user.sql
 
