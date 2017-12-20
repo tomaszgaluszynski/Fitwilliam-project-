@@ -2,6 +2,11 @@
 
 --thm.gal@gmail.com
 
+Project brief:
+
+
+Simple hotel employee chain database. Hotells are located in different countreies, disclosing employees names,departments,sallaries etc.
+
 
 Hi John script should run in following order:
 
