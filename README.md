@@ -31,3 +31,7 @@ Script should run in following order:
 -@create_procedure.sql
 
 -@PACKAGE.sql
+
+-script performing and reporting function called @my_report showing:
+ 
+ EMPLOYEE_ID,FIRST_NAME,LAST_NAME,DEPARTMENT_NAME,SALARY
